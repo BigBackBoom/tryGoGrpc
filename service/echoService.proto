@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+service Echo {
+    rpc GetEcho (GetEchoMessage) returns (EchoResponse) {}
+}
+message GetEchoMessage {
+    string target_echo = 1;
+}
+message EchoResponse {
+    string input = 1;
+}
